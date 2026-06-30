@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Коди.АИ — ИИ-помощник для обучения программированию: проверка кода и объяснения ошибок для школьников и студентов."
+    />
+    <title>Коди.АИ — промо для инвесторов</title>
+    <link rel="icon" type="image/png" href="img/kodi.png?v=2" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="page">
+    <span id="top" class="page__anchor" tabindex="-1" aria-hidden="true"></span>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="#top">
+          <img
+            class="brand-mark"
+            src="img/kodi.png?v=2"
+            width="48"
+            height="48"
+            alt=""
+            aria-hidden="true"
+          />
+          <span class="site-header__title">Коди.АИ</span>
+        </a>
+        <button
+          type="button"
+          class="site-header__menu-toggle"
+          id="site-header-menu-toggle"
+          aria-expanded="false"
+          aria-controls="site-header-nav"
+          aria-label="Открыть меню навигации"
+        >
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+          <span class="site-header__menu-bar" aria-hidden="true"></span>
+        </button>
+        <nav class="site-header__nav" id="site-header-nav" aria-label="Навигация по странице">
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#intro"
+            data-nav-section="intro"
+            >О проекте</a
+          >
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#audience"
+            data-nav-section="audience"
+            >Для кого</a
+          >
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#ide-demo"
+            data-nav-section="ide-demo"
+            >Демо IDE</a
+          >
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#roadmap"
+            data-nav-section="roadmap"
+            >Дорожная карта</a
+          >
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#team"
+            data-nav-section="team"
+            >Команда</a
+          >
+          <a
+            class="site-header__link text-link text-link--on-light"
+            href="#feedback"
+            data-nav-section="feedback"
+            >Связаться</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="page__main" id="main" tabindex="-1">
+      <section class="hero page__section" id="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <p class="hero__badge">EdTech · ИИ · программирование</p>
+            <h1 class="hero__title" id="hero-title">Коди.АИ учит на ошибках, а не ругает за них</h1>
+            <p class="hero__lead">
+              Мы делаем сервис, который помогает новичкам быстрее понимать свой код: подсвечивает проблемы,
+              предлагает исправления и объясняет «почему так лучше» — чтобы сократить время проверки и
+              укрепить базу перед экзаменами и проектами.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#ide-demo">Смотреть демо IDE</a>
+              <a class="button button--ghost" href="#feedback">Обсудить с командой</a>
+            </div>
+          </div>
+          <figure class="mascot-figure mascot-figure--hero hero__visual" aria-hidden="true">
+            <img
+              class="mascot-figure__img"
+              src="img/%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D0%BA%D0%B0.svg"
+              width="320"
+              height="320"
+              alt=""
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="intro page__section" id="intro" aria-labelledby="intro-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--left" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D0%BA%D0%BE%D0%B4%D0%B8.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="intro__inner">
+          <header class="section-head">
+            <p class="section-head__overline">О проекте</p>
+            <h2 class="section-head__title" id="intro-title">Что такое Коди.АИ</h2>
+            <p class="section-head__lead">
+              Интерактивный помощник для тех, кто только осваивает программирование: от школьных задач до
+              первых курсовых.
+            </p>
+          </header>
+          <div class="intro__grid">
+            <div class="intro__text">
+              <p>
+                По нашей концепции пользователь вставляет код, а система за считанные секунды возвращает
+                структурированный разбор: замечания с уровнем важности, объяснения простым языком и
+                вариант исправленного кода. Так новичок не застревает на поиске «что не так», а учится на
+                конкретных примерах.
+              </p>
+              <p>
+                Технологически продукт строится как веб-приложение с потоковой выдачей ответа (SSE),
+                оркестрацией промптов и устойчивым бэкендом; промо-страница показывает сценарий и целевую
+                аудиторию для инвесторов и партнёров.
+              </p>
+              <p class="intro__list-title">Что получает ученик</p>
+              <ul class="intro__list">
+                <li>меньше времени на «тупик» и разбор синтаксиса;</li>
+                <li>понятные формулировки вместо сухого списка ошибок;</li>
+                <li>опора на учебный код, без замены собственного мышления.</li>
+              </ul>
+            </div>
+            <aside class="intro__aside" aria-label="Ключевые метрики концепции">
+              <div class="intro__stat">
+                <p class="intro__stat-item">
+                  <span class="intro__stat-value">≈15 с</span>
+                  <span class="intro__stat-label">целевое время ответа на один запрос анализа</span>
+                </p>
+                <p class="intro__stat-item">
+                  <span class="intro__stat-value">10+</span>
+                  <span class="intro__stat-label">языков программирования в дорожной карте продукта</span>
+                </p>
+                <p class="intro__stat-item">
+                  <span class="intro__stat-value">4</span>
+                  <span class="intro__stat-label">уровня критичности замечаний в интерфейсе</span>
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="audience page__section" id="audience" aria-labelledby="audience-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--right" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D0%BF%D0%BE%D0%B4%D0%BC%D0%B8%D0%B3.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="audience__inner">
+          <header class="section-head">
+            <p class="section-head__overline">Аудитория</p>
+            <h2 class="section-head__title" id="audience-title">Для кого Коди.АИ</h2>
+            <p class="section-head__lead">
+              Фокус — обучение основам программирования: школьники 9–11 классов и студенты первых курсов.
+            </p>
+          </header>
+          <div class="audience__grid">
+            <article class="audience-card">
+              <div class="audience-card__icon" aria-hidden="true">9–11</div>
+              <h3 class="audience-card__title">Школьники старших классов</h3>
+              <p class="audience-card__text">
+                Подготовка к информатике, олимпиадным и проектным заданиям: разбор логики, стиля и типичных
+                ошибок в коротком цикле обратной связи.
+              </p>
+            </article>
+            <article class="audience-card">
+              <div class="audience-card__icon" aria-hidden="true">1–2</div>
+              <h3 class="audience-card__title">Студенты начальных курсов</h3>
+              <p class="audience-card__text">
+                Первая лабораторная, синтаксис нового языка, рефакторинг «как у преподавателя» — с
+                пояснениями, а не готовым списанием.
+              </p>
+            </article>
+            <article class="audience-card">
+              <div class="audience-card__icon" aria-hidden="true">Ed</div>
+              <h3 class="audience-card__title">Преподаватели и курсы</h3>
+              <p class="audience-card__text">
+                Снижение нагрузки на ручную проверку однотипных заданий и единый тон объяснений — как
+                перспектива B2B после ядра продукта для учеников.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="ide-demo page__section" id="ide-demo" aria-labelledby="ide-demo-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--tr" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D1%83%D0%BC%D0%BD%D0%B8.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="ide-demo__inner">
+          <header class="section-head">
+            <p class="section-head__overline">Интерфейс</p>
+            <h2 class="section-head__title" id="ide-demo-title">Демо: код слева — решение справа</h2>
+            <p class="section-head__lead">
+              На промо-сайте показан учебный пример. В продукте правая панель заполняется результатом ИИ-анализа
+              в реальном времени.
+            </p>
+          </header>
+          <p class="ide-demo__sr-hint" id="ide-demo-hint">
+            Выберите язык и учебный трек на вкладках, при желании отредактируйте код. Кнопка ниже обновляет панель
+            справа и блок разбора.
+          </p>
+          <p class="ide-demo__sr-hint" id="ide-demo-output-hint">
+            Нажмите «Показать улучшенный вариант», чтобы увидеть демонстрационный результат и список улучшений.
+          </p>
+          <div class="ide-demo__tabs" role="tablist" aria-label="Язык и учебный трек примера" id="ide-demo-tabs">
+            <button
+              type="button"
+              class="ide-demo__tab ide-demo__tab--active"
+              role="tab"
+              id="ide-demo-tab-python"
+              aria-selected="true"
+              aria-controls="ide-demo-tabpanel"
+              data-scenario="python"
+            >
+              <span class="ide-demo__tab-lang">Python</span>
+              <span class="ide-demo__tab-track">Школа · основы</span>
+            </button>
+            <button
+              type="button"
+              class="ide-demo__tab"
+              role="tab"
+              id="ide-demo-tab-javascript"
+              aria-selected="false"
+              aria-controls="ide-demo-tabpanel"
+              data-scenario="javascript"
+              tabindex="-1"
+            >
+              <span class="ide-demo__tab-lang">JavaScript</span>
+              <span class="ide-demo__tab-track">Вуз · первая лаба</span>
+            </button>
+            <button
+              type="button"
+              class="ide-demo__tab"
+              role="tab"
+              id="ide-demo-tab-sql"
+              aria-selected="false"
+              aria-controls="ide-demo-tabpanel"
+              data-scenario="sql"
+              tabindex="-1"
+            >
+              <span class="ide-demo__tab-lang">SQL</span>
+              <span class="ide-demo__tab-track">Запросы к БД</span>
+            </button>
+            <button
+              type="button"
+              class="ide-demo__tab"
+              role="tab"
+              id="ide-demo-tab-cpp"
+              aria-selected="false"
+              aria-controls="ide-demo-tabpanel"
+              data-scenario="cpp"
+              tabindex="-1"
+            >
+              <span class="ide-demo__tab-lang">C++</span>
+              <span class="ide-demo__tab-track">Олимпиадная задача</span>
+            </button>
+          </div>
+          <div
+            class="ide-demo__editors"
+            id="ide-demo-tabpanel"
+            role="tabpanel"
+            aria-labelledby="ide-demo-tab-python"
+          >
+            <div class="ide-demo__panel">
+              <div class="ide-demo__column">
+                <div class="mac-window mac-window--fill ide-demo__mac">
+                  <div class="mac-window__titlebar">
+                    <div class="mac-window__traffic" aria-hidden="true">
+                      <span class="mac-traffic mac-traffic--close"></span>
+                      <span class="mac-traffic mac-traffic--min"></span>
+                      <span class="mac-traffic mac-traffic--zoom"></span>
+                    </div>
+                    <span class="mac-window__title" id="ide-demo-input-title">Ваш код — main.py</span>
+                  </div>
+                  <div class="mac-window__body mac-window__body--stretch">
+                    <label class="ide-demo__sr-hint" for="ide-demo-input">Редактор кода</label>
+                    <textarea
+                      id="ide-demo-input"
+                      class="ide-demo__editor ide-demo__code-area"
+                      name="code"
+                      spellcheck="false"
+                      autocomplete="off"
+                      aria-describedby="ide-demo-hint"
+                      rows="12"
+                    >def summ(a,b):
+    return a+b
+
+for i in range(100):
+    print(summ(i,i+1))</textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="ide-demo__column">
+                <div class="mac-window mac-window--fill ide-demo__mac" role="region" aria-labelledby="ide-demo-output-label">
+                  <div class="mac-window__titlebar">
+                    <div class="mac-window__traffic" aria-hidden="true">
+                      <span class="mac-traffic mac-traffic--close"></span>
+                      <span class="mac-traffic mac-traffic--min"></span>
+                      <span class="mac-traffic mac-traffic--zoom"></span>
+                    </div>
+                    <span class="mac-window__title" id="ide-demo-output-label">Улучшенный вариант</span>
+                  </div>
+                  <div class="mac-window__body mac-window__body--stretch ide-demo__output-shell">
+                    <pre
+                      class="ide-demo__output mac-window__code ide-demo__code-area"
+                      id="ide-demo-output"
+                      aria-describedby="ide-demo-output-hint"
+                    ></pre>
+                    <div class="ide-demo__pattern-loader" aria-hidden="true">
+                      <div class="binary-pattern binary-pattern--compact">
+                        <div class="binary-pattern__grid">
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">0</span>
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">0</span>
+                          <span class="binary-pattern__cell">0</span>
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">0</span>
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">0</span>
+                          <span class="binary-pattern__cell">1</span>
+                          <span class="binary-pattern__cell">0</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ide-demo__analysis">
+            <div
+              class="mac-window mac-window--fill ide-demo__mac ide-demo__explain-mac"
+              id="ide-demo-explain"
+              role="region"
+              aria-labelledby="ide-demo-explain-title"
+              aria-live="polite"
+            >
+              <div class="mac-window__titlebar">
+                <div class="mac-window__traffic" aria-hidden="true">
+                  <span class="mac-traffic mac-traffic--close"></span>
+                  <span class="mac-traffic mac-traffic--min"></span>
+                  <span class="mac-traffic mac-traffic--zoom"></span>
+                </div>
+                <span class="mac-window__title" id="ide-demo-explain-title">Разбор кода</span>
+              </div>
+              <div class="mac-window__body mac-window__body--stretch mac-window__body--explain ide-demo__explain-shell">
+                <div id="ide-demo-explain-body" class="ide-demo__explain-content">
+                  <p class="ide-demo__explain-idle">Здесь появится разбор после нажатия кнопки ниже.</p>
+                </div>
+                <div class="ide-demo__pattern-loader ide-demo__pattern-loader--explain" aria-hidden="true">
+                  <div class="binary-pattern binary-pattern--compact">
+                    <div class="binary-pattern__grid">
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">0</span>
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">0</span>
+                      <span class="binary-pattern__cell">0</span>
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">0</span>
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">0</span>
+                      <span class="binary-pattern__cell">1</span>
+                      <span class="binary-pattern__cell">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ide-demo__toolbar">
+            <button type="button" class="button button--primary" id="ide-demo-run">
+              Показать улучшенный вариант
+            </button>
+          </div>
+          <div class="ide-demo__chat-wrap">
+            <p class="ide-demo__sr-hint" id="ide-demo-chat-hint">
+              Выберите готовый вопрос ниже — в окне появится ответ ассистента по текущему примеру.
+            </p>
+            <div
+              class="mac-window mac-window--fill ide-demo__mac ide-demo__chat-mac"
+              id="ide-demo-chat"
+              role="region"
+              aria-labelledby="ide-demo-chat-title"
+            >
+              <div class="mac-window__titlebar">
+                <div class="mac-window__traffic" aria-hidden="true">
+                  <span class="mac-traffic mac-traffic--close"></span>
+                  <span class="mac-traffic mac-traffic--min"></span>
+                  <span class="mac-traffic mac-traffic--zoom"></span>
+                </div>
+                <span class="mac-window__title" id="ide-demo-chat-title">Спросить по коду</span>
+              </div>
+              <div class="mac-window__body mac-window__body--stretch ide-demo__chat-shell">
+                <div
+                  class="ide-demo__chat-log"
+                  id="ide-demo-chat-log"
+                  aria-live="polite"
+                  aria-describedby="ide-demo-chat-hint"
+                >
+                  <p class="ide-demo__chat-idle">
+                    Это диалог по коду: ассистент отвечает на вопросы по текущему примеру. Выберите один из вопросов
+                    ниже.
+                  </p>
+                </div>
+                <div class="ide-demo__chat-suggestions" id="ide-demo-chat-suggestions" aria-label="Готовые вопросы"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ide-demo__ticker">
+          <div class="ide-demo__ticker-mask">
+            <div class="ide-demo__ticker-track">
+              <span class="ide-demo__ticker-segment">
+                Это промо-демо сайта: интерфейс и сценарии в разработке и могут меняться. Полноценный продукт с
+                ИИ-разбором кода — в работе.
+                <a
+                  class="ide-demo__ticker-link"
+                  href="https://t.me/kodi_ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Напишите нам в Telegram</a
+                >.
+                <span class="ide-demo__ticker-dot" aria-hidden="true"> · </span>
+              </span>
+              <span class="ide-demo__ticker-segment" aria-hidden="true">
+                Это промо-демо сайта: интерфейс и сценарии в разработке и могут меняться. Полноценный продукт с
+                ИИ-разбором кода — в работе.
+                <a
+                  class="ide-demo__ticker-link"
+                  href="https://t.me/kodi_ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  >Напишите нам в Telegram</a
+                >.
+                <span class="ide-demo__ticker-dot" aria-hidden="true"> · </span>
+              </span>
+              <span class="ide-demo__ticker-segment" aria-hidden="true">
+                Это промо-демо сайта: интерфейс и сценарии в разработке и могут меняться. Полноценный продукт с
+                ИИ-разбором кода — в работе.
+                <a
+                  class="ide-demo__ticker-link"
+                  href="https://t.me/kodi_ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  >Напишите нам в Telegram</a
+                >.
+                <span class="ide-demo__ticker-dot" aria-hidden="true"> · </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features page__section" id="features" aria-labelledby="features-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--left" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D1%83%D0%BC%D0%BD%D0%B8%D0%B8%D0%BA%D1%80%D1%83%D1%82.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="features__inner">
+          <header class="section-head">
+            <p class="section-head__overline">Возможности продукта</p>
+            <h2 class="section-head__title" id="features-title">Что заложено в Коди.АИ</h2>
+            <p class="section-head__lead">Кратко по технической концепции — для оценки масштабируемости и рынка.</p>
+          </header>
+          <div class="features__grid">
+            <article class="feature-pill">
+              <h3 class="feature-pill__title">Авторазбор кода</h3>
+              <p class="feature-pill__text">Баги, антипаттерны, риски и производительность — с градацией критичности.</p>
+            </article>
+            <article class="feature-pill">
+              <h3 class="feature-pill__title">Рефакторинг с объяснением</h3>
+              <p class="feature-pill__text">Не только «как исправить», но и зачем — в духе обучения, а не шпаргалки.</p>
+            </article>
+            <article class="feature-pill">
+              <h3 class="feature-pill__title">Диалог по коду</h3>
+              <p class="feature-pill__text">Уточняющие вопросы по текущему ревью в рамках сессии.</p>
+            </article>
+            <article class="feature-pill">
+              <h3 class="feature-pill__title">История и аккаунты</h3>
+              <p class="feature-pill__text">Сохранение сессий для возврата к разбору позже (в релизной версии).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap page__section" id="roadmap" aria-labelledby="roadmap-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--right" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D1%81%D1%83%D0%BF%D0%B5%D1%80.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="roadmap__inner">
+          <header class="section-head">
+            <p class="section-head__overline">Видение</p>
+            <h2 class="section-head__title" id="roadmap-title">Развитие продукта</h2>
+            <p class="section-head__lead">
+              От простого разбора кода до среды уровня профессиональной IDE — поэтапно, без резких скачков в продукте.
+            </p>
+          </header>
+          <div class="roadmap__timeline" id="roadmap-timeline">
+            <div class="roadmap__track" aria-hidden="true">
+              <div class="roadmap__line roadmap__line--bg"></div>
+              <div class="roadmap__line roadmap__line--fill"></div>
+            </div>
+            <ol class="roadmap__list">
+              <li class="roadmap__step roadmap__step--milestone">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <div class="roadmap__phase">Сейчас</div>
+                  <h3 class="roadmap__name">ИИ-ревью и обучение на ошибках</h3>
+                  <p class="roadmap__text">
+                    Вставляете код — получаете разбор, уровни важности замечаний и понятные объяснения.
+                  </p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">История сессий и аккаунты</h3>
+                  <p class="roadmap__text">Возвращаться к прошлым разборам и вести учебную линию.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Больше языков и учебные треки</h3>
+                  <p class="roadmap__text">Расширение стека и сценарии «от задачи к задаче».</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Потоковые подсказки и диалог</h3>
+                  <p class="roadmap__text">Уточняющие вопросы по коду в реальном времени.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--milestone">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <div class="roadmap__phase">Следующий рубеж</div>
+                  <h3 class="roadmap__name">Kodi Pen</h3>
+                  <p class="roadmap__text">
+                    Песочница в духе CodePen: запуск и предпросмотр в браузере, сниппеты, шаринг заданий и демо для
+                    учителей.
+                  </p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Многофайловые задания</h3>
+                  <p class="roadmap__text">Несколько файлов в одном проекте, ближе к реальному коду.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Git и терминал (демо)</h3>
+                  <p class="roadmap__text">Базовые операции с репозиторием и командной строкой в учебном режиме.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Коллаборация</h3>
+                  <p class="roadmap__text">Совместное редактирование и разбор парой или в группе.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--minor">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <h3 class="roadmap__name">Корпоративные сценарии</h3>
+                  <p class="roadmap__text">Возможности для школ и вузов: классы, роли, отчёты.</p>
+                </div>
+              </li>
+              <li class="roadmap__step roadmap__step--milestone">
+                <span class="roadmap__dot" aria-hidden="true"></span>
+                <div class="roadmap__content">
+                  <div class="roadmap__phase">Долгосрочная цель</div>
+                  <h3 class="roadmap__name">Полноценная IDE с ИИ</h3>
+                  <p class="roadmap__text">
+                    Уровень Cursor, Windsurf и GigaCode: проект в репозитории, расширения, глубокая интеграция ИИ в
+                    редактор и рабочий процесс.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="team page__section" id="team" aria-labelledby="team-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--bl" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D1%81%D1%87%D0%B0%D1%81%D1%82%D0%B8.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="team__inner">
+          <header class="section-head team__head">
+            <p class="section-head__overline">Команда</p>
+            <h2 class="section-head__title" id="team-title">Наша команда</h2>
+            <p class="section-head__lead">
+              Небольшая команда, которая отвечает за продукт, технологию и аналитику Коди.АИ.
+            </p>
+          </header>
+          <ul class="team__grid">
+            <li>
+              <article class="team-card">
+                <img
+                  class="team-card__photo"
+                  src="img/%D0%9D%D0%B0%D1%81%D1%82%D1%8F.jpg"
+                  width="160"
+                  height="160"
+                  alt="Анастасия Тихонова"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="team-card__name">Анастасия Тихонова</h3>
+                <p class="team-card__role">Управление командой</p>
+              </article>
+            </li>
+            <li>
+              <article class="team-card">
+                <img
+                  class="team-card__photo"
+                  src="img/%D0%94%D0%B8%D0%BC%D0%B0.jpg"
+                  width="160"
+                  height="160"
+                  alt="Дмитрий Поляков"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="team-card__name">Дмитрий Поляков</h3>
+                <p class="team-card__role">Разработка технического паспорта проекта</p>
+              </article>
+            </li>
+            <li>
+              <article class="team-card">
+                <img
+                  class="team-card__photo"
+                  src="img/%D0%91%D0%BE%D1%80%D1%8F.jpg"
+                  width="160"
+                  height="160"
+                  alt="Борис Басов"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="team-card__name">Борис Басов</h3>
+                <p class="team-card__role">Разработка веб-приложений</p>
+              </article>
+            </li>
+            <li>
+              <article class="team-card">
+                <img
+                  class="team-card__photo"
+                  src="img/%D0%9C%D0%B8%D1%88%D0%B0.jpg"
+                  width="160"
+                  height="160"
+                  alt="Михаил Кузьминов"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3 class="team-card__name">Михаил Кузьминов</h3>
+                <p class="team-card__role">Ведущий аналитик</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feedback page__section" id="feedback" aria-labelledby="feedback-title">
+        <figure class="mascot-figure mascot-figure--ambient mascot-figure--right mascot-figure--on-dark" aria-hidden="true">
+          <img
+            class="mascot-figure__img"
+            src="img/%D1%80%D1%83%D1%87%D0%BA%D0%B8.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="feedback__inner">
+          <header class="section-head">
+            <p class="section-head__overline">Контакты</p>
+            <h2 class="section-head__title" id="feedback-title">Связаться с нами</h2>
+            <p class="section-head__lead">
+              Промо-материал: продукт в разработке. Пишите команде Коди.АИ в Telegram — t.me/kodi_ai — обсудим
+              инвестиции, пилот в школе или вузе и партнёрство.
+            </p>
+          </header>
+          <ul class="social-links" aria-label="Контакт в Telegram">
+            <li>
+              <a
+                class="social-links__item"
+                href="https://t.me/kodi_ai"
+                aria-label="Канал Коди.АИ в Telegram (t.me/kodi_ai)"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="social-links__icon"
+                  viewBox="0 0 40 40"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <defs>
+                    <linearGradient id="socialGradTg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#7be9ff" />
+                      <stop offset="100%" stop-color="#0096bc" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="2" y="2" width="36" height="36" rx="11" fill="url(#socialGradTg)" />
+                  <path
+                    d="M30.4 11.2 L8.8 19.4 c-1.2 0.5 -1.2 1.2 -0.2 1.5 l5.4 1.7 l2 6.3 c0.3 0.8 0.5 1.1 1.1 1.1 c0.5 0 0.8 -0.2 1.2 -0.6 l2.8 -2.7 l5.6 4.1 c1 0.6 1.7 0.3 2 -0.9 l3.6 -16.9 c0.4 -1.5 -0.5 -2.2 -1.6 -1.8 z M16.4 23.2 l13.2 -8.3 c0.3 -0.2 0.6 -0.1 0.4 0.2 l-10.8 9.8 l-0.4 4.4 l-2.4 -6.1 z"
+                    fill="#0f2a44"
+                  />
+                </svg>
+                <span class="social-links__label">Telegram</span>
+                <p class="social-links__hint">t.me/kodi_ai</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        <p class="site-footer__copy">© Коди.АИ, промо-материал. Градиенты и анимированный знак — элементы фирменного стиля.</p>
+        <div class="site-footer__links">
+          <a class="site-footer__link text-link text-link--on-dark" href="#top">Наверх</a>
+          <a class="site-footer__link text-link text-link--on-dark" href="#team">Команда</a>
+          <a class="site-footer__link text-link text-link--on-dark" href="#feedback">Связаться</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+/* Блок: feedback — форма обратной связи */
+.feedback {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+  background: var(--color-deep);
+  color: var(--color-neutral-light);
+}
+
+.feedback__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 56rem);
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback .section-head {
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.feedback .section-head__overline {
+  color: var(--color-glow);
+}
+
+.feedback .section-head__title {
+  color: #fff;
+}
+
+.feedback .section-head__lead {
+  color: rgba(248, 250, 252, 0.78);
+}

@@ -1,0 +1,32 @@
+/* Блок: section-head — общий заголовок секции */
+.section-head {
+  max-width: 40rem;
+  margin-bottom: var(--space-xl);
+}
+
+.section-head__overline {
+  display: inline-block;
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.section-head__title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-deep);
+}
+
+.section-head__lead {
+  margin: 0;
+  font-size: var(--text-lead);
+  color: var(--color-muted);
+}

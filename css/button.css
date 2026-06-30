@@ -1,0 +1,99 @@
+/* Блок: button — primary/ghost по брендбуку (.btn-state__sample) */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.5rem 0.625rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 5px rgba(0, 184, 230, 0.55);
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button--primary {
+  color: #fff;
+  background: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 184, 230, 0.35);
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--color-glow);
+  color: var(--color-deep);
+  box-shadow: 0 0 16px rgba(123, 233, 255, 0.45);
+}
+
+.button--primary:active:not(:disabled) {
+  background: var(--color-primary-hover);
+  color: #fff;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.button--ghost {
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid rgba(0, 184, 230, 0.45);
+  box-sizing: border-box;
+}
+
+.button--ghost:hover:not(:disabled) {
+  background: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+.button--ghost:focus-visible {
+  box-shadow:
+    0 0 0 2px rgba(0, 184, 230, 0.9),
+    0 0 0 5px rgba(255, 255, 255, 0.55);
+}
+
+.button--ghost:active:not(:disabled) {
+  background: rgba(0, 184, 230, 0.12);
+  transform: translateY(1px);
+}
+
+.button--block {
+  width: 100%;
+}
+
+/* CTA в герое — крупнее базовой кнопки */
+.hero .button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  min-height: 2.75rem;
+}
+
+/* Демо IDE: заметная кнопка запуска под панелями */
+.ide-demo__toolbar .button {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 3.125rem;
+  min-width: min(100%, 20rem);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 184, 230, 0.4);
+}

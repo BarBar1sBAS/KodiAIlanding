@@ -1,0 +1,32 @@
+/* Блок: features — ключевые возможности (дорожная карта для инвесторов) */
+.features {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+  background: linear-gradient(180deg, var(--color-neutral-light) 0%, #fff 100%);
+}
+
+.features__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.features__grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .features__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .features__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

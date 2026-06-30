@@ -1,0 +1,87 @@
+/* Блок: mascot-figure — иллюстрации маскота Коди */
+
+.mascot-figure {
+  margin: 0;
+}
+
+/* Hero: заметный «герой» первого экрана */
+.mascot-figure--hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascot-figure--hero .mascot-figure__img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mascot-figure--hero .mascot-figure__img {
+    animation: mascot-float 5s ease-in-out infinite;
+  }
+}
+
+@keyframes mascot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-figure--hero .mascot-figure__img {
+    animation: none;
+  }
+}
+
+/* Ambient: полупрозрачный водяной знак в фоне секции */
+.mascot-figure--ambient {
+  position: absolute;
+  z-index: 0;
+  width: clamp(15rem, 28vw, 27rem);
+  opacity: 0.13;
+  pointer-events: none;
+  /* мягко растворяем силуэт, чтобы не было резкого «стикера» */
+  -webkit-mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 50%, transparent 100%);
+}
+
+.mascot-figure--ambient .mascot-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+.mascot-figure--right {
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mascot-figure--left {
+  left: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mascot-figure--tr {
+  right: -3rem;
+  top: -3rem;
+}
+
+.mascot-figure--bl {
+  left: -3rem;
+  bottom: -3rem;
+}
+
+.mascot-figure--on-dark {
+  opacity: 0.2;
+}
