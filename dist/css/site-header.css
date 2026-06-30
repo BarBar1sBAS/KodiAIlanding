@@ -1,0 +1,210 @@
+/* Блок: site-header */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 900;
+  min-height: var(--header-h);
+  display: flex;
+  align-items: flex-start;
+  background: rgba(248, 250, 252, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  position: relative;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0;
+  padding: 0.65rem 0;
+  min-height: var(--header-h);
+  box-sizing: border-box;
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--color-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+  justify-self: start;
+}
+
+.site-header__brand:hover {
+  color: var(--color-primary);
+}
+
+.site-header__brand:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.site-header__title {
+  white-space: nowrap;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Бургер */
+.site-header__menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgba(0, 184, 230, 0.35);
+  border-radius: var(--radius-md);
+  background: #fff;
+  cursor: pointer;
+  justify-self: end;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.site-header__menu-toggle:hover {
+  background: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+.site-header__menu-toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.site-header__menu-bar {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  margin-inline: auto;
+  background: var(--color-deep);
+  border-radius: 1px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.site-header--nav-open .site-header__menu-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.site-header--nav-open .site-header__menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header--nav-open .site-header__menu-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header__menu-bar {
+    transition: none;
+  }
+}
+
+.site-header__nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 901;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-xs);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    visibility 0.25s;
+  padding: 0 var(--space-md);
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  max-width: none;
+  box-sizing: border-box;
+  background: rgba(248, 250, 252, 0.98);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 12px 24px rgba(15, 42, 68, 0.08);
+}
+
+.site-header--nav-open .site-header__nav {
+  max-height: 22rem;
+  opacity: 1;
+  visibility: visible;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.site-header__link {
+  padding: 0.6rem 0.25rem;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .site-header__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: 0;
+    min-height: var(--header-h);
+  }
+
+  .site-header__menu-toggle {
+    display: none;
+  }
+
+  .site-header__nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-xs) var(--space-lg);
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .site-header--nav-open .site-header__nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header__link {
+    padding: 0.25rem 0;
+    display: inline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header__nav {
+    transition: none;
+  }
+}

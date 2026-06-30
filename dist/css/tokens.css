@@ -1,0 +1,41 @@
+/* Дизайн-токены брендбука Коди.АИ (не БЭМ-блок — глобальные переменные) */
+:root {
+  --color-primary: #00b8e6;
+  --color-primary-hover: #0096bc;
+  --color-glow: #7be9ff;
+  --color-deep: #0f2a44;
+  --color-light: #e6f8ff;
+  --color-neutral-dark: #1e293b;
+  --color-neutral-light: #f8fafc;
+  --color-code-bg: #0f172a;
+  --color-border: rgba(15, 42, 68, 0.12);
+  --color-muted: #475569;
+  --shadow-soft: 0 2px 12px rgba(15, 42, 68, 0.06);
+  --shadow-brand: 0 8px 28px rgba(0, 184, 230, 0.22);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 624.9375rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: clamp(2rem, 5vw, 4rem);
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1.125rem);
+  --text-lead: clamp(1rem, 0.95rem + 0.35vw, 1.2rem);
+  --header-h: 4.25rem;
+  --focus-ring: 0 0 0 2px var(--color-neutral-light), 0 0 0 5px rgba(0, 184, 230, 0.55);
+  --transition-fast: 0.2s ease;
+  --gradient-brand: linear-gradient(135deg, #7be9ff 0%, #00b8e6 50%, #0096bc 100%);
+  --gradient-brand-soft: linear-gradient(135deg, rgba(123, 233, 255, 0.85) 0%, rgba(0, 184, 230, 0.85) 100%);
+  --gradient-deep: linear-gradient(135deg, #0f2a44 0%, #0096bc 100%);
+  --gradient-aurora:
+    radial-gradient(60% 40% at 20% 30%, rgba(0, 184, 230, 0.35), transparent 60%),
+    radial-gradient(50% 40% at 80% 20%, rgba(123, 233, 255, 0.4), transparent 65%),
+    radial-gradient(70% 50% at 50% 90%, rgba(0, 150, 188, 0.32), transparent 70%);
+}

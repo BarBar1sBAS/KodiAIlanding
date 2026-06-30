@@ -1,0 +1,39 @@
+/* Блок: team — секция «Наша команда» */
+.team {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+  background: linear-gradient(180deg, var(--color-neutral-light) 0%, #fff 100%);
+}
+
+.team__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.team__head {
+  margin-bottom: var(--space-xl);
+}
+
+.team__grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .team__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

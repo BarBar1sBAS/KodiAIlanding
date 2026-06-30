@@ -1,0 +1,28 @@
+/* Блок: brand-mark — маскот Коди.АИ */
+.brand-mark {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  filter: drop-shadow(0 4px 12px rgba(0, 184, 230, 0.28));
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.site-header__brand:hover .brand-mark,
+.site-header__brand:focus-visible .brand-mark {
+  transform: rotate(-4deg) scale(1.04);
+  filter: drop-shadow(0 6px 16px rgba(123, 233, 255, 0.55));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark,
+  .site-header__brand:hover .brand-mark,
+  .site-header__brand:focus-visible .brand-mark {
+    transition: none;
+    transform: none;
+  }
+}
