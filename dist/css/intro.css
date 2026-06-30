@@ -1,0 +1,88 @@
+/* Блок: intro — краткое описание проекта */
+.intro {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3xl) 0;
+  background: #fff;
+}
+
+.intro__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.intro__grid {
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .intro__grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.intro__text p {
+  margin: 0 0 var(--space-md);
+}
+
+.intro__text p:last-child {
+  margin-bottom: 0;
+}
+
+.intro__list-title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--color-deep);
+}
+
+.intro__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.intro__aside {
+  padding: var(--space-lg);
+  background: var(--color-light);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 184, 230, 0.2);
+  box-shadow: var(--shadow-soft);
+}
+
+.intro__stat {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.intro__stat-item {
+  margin: 0;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(15, 42, 68, 0.08);
+}
+
+.intro__stat-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.intro__stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.intro__stat-label {
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+}

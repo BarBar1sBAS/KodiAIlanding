@@ -1,0 +1,178 @@
+/* Блок: hero — первый экран: только текст, фон из градиентов */
+.hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(100vh - var(--header-h));
+	padding: var(--space-3xl) 0;
+	overflow: hidden;
+	isolation: isolate;
+	border-bottom: 1px solid var(--color-border);
+	/* База заметно холоднее «чистого» белого — фон не сливается с остальными секциями */
+	background-color: #e4f4fb;
+	background-image:
+		radial-gradient(ellipse 130% 85% at 50% -8%, rgba(0, 184, 230, 0.42), transparent 58%),
+		radial-gradient(ellipse 70% 55% at 100% 28%, rgba(123, 233, 255, 0.38), transparent 62%),
+		radial-gradient(ellipse 65% 50% at 0% 78%, rgba(0, 150, 188, 0.28), transparent 58%),
+		radial-gradient(ellipse 90% 60% at 50% 105%, rgba(15, 42, 68, 0.06), transparent 55%),
+		linear-gradient(
+			168deg,
+			#d4eef9 0%,
+			#e8f5fc 32%,
+			#eef8fd 58%,
+			#e2f3fa 100%
+		);
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	inset: -20%;
+	z-index: 0;
+	pointer-events: none;
+	background:
+		radial-gradient(ellipse 85% 55% at 72% 18%, rgba(0, 184, 230, 0.22), transparent 58%),
+		radial-gradient(ellipse 70% 50% at 12% 88%, rgba(123, 233, 255, 0.2), transparent 62%),
+		radial-gradient(ellipse 50% 45% at 48% 48%, rgba(0, 184, 230, 0.12), transparent 65%);
+	will-change: transform;
+}
+
+.hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	opacity: 0.72;
+	background-image: repeating-linear-gradient(
+		-12deg,
+		transparent,
+		transparent 2.5rem,
+		rgba(0, 184, 230, 0.07) 2.5rem,
+		rgba(0, 184, 230, 0.07) 2.55rem
+	);
+	mask-image: radial-gradient(ellipse 90% 75% at 50% 42%, #000 32%, transparent 78%);
+	-webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 42%, #000 32%, transparent 78%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.hero::before {
+		animation: hero-bg-drift 48s ease-in-out infinite alternate;
+	}
+}
+
+@keyframes hero-bg-drift {
+	0% {
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+	100% {
+		transform: translate3d(1.2%, -0.8%, 0) scale(1.02);
+	}
+}
+
+@supports (height: 100dvh) {
+	.hero {
+		min-height: calc(100dvh - var(--header-h));
+	}
+}
+
+.hero__inner {
+	position: relative;
+	z-index: 1;
+	width: min(100% - 2rem, 64rem);
+	margin-inline: auto;
+	flex: 0 1 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-xl);
+	align-items: center;
+	justify-items: center;
+}
+
+@media (min-width: 56.25rem) {
+	.hero__inner {
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		gap: var(--space-2xl);
+		justify-items: stretch;
+	}
+}
+
+.hero__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.hero__visual {
+	position: relative;
+}
+
+.hero__visual::before {
+	content: "";
+	position: absolute;
+	inset: 8%;
+	z-index: -1;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(0, 184, 230, 0.3), transparent 70%);
+	filter: blur(24px);
+	pointer-events: none;
+}
+
+@media (min-width: 56.25rem) {
+	.hero__content {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.hero__visual {
+		order: 2;
+	}
+}
+
+.hero__badge {
+	display: inline-block;
+	margin: 0 0 var(--space-md);
+	padding: 0.35rem 0.85rem;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	color: var(--color-deep);
+	background: rgba(255, 255, 255, 0.72);
+	border: 1px solid rgba(0, 184, 230, 0.22);
+	border-radius: var(--radius-pill);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	box-shadow: var(--shadow-soft);
+}
+
+.hero__title {
+	margin: 0 0 var(--space-md);
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: clamp(2rem, 1.5rem + 2.5vw, 3.25rem);
+	line-height: 1.12;
+	letter-spacing: -0.02em;
+	color: var(--color-deep);
+	text-wrap: balance;
+}
+
+.hero__lead {
+	margin: 0 0 var(--space-lg);
+	max-width: 40rem;
+	font-size: var(--text-lead);
+	color: var(--color-muted);
+}
+
+.hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--space-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero::before {
+		animation: none;
+	}
+}
